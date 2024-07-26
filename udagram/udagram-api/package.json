@@ -2,11 +2,11 @@
   "name": "udagram-api",
   "version": "2.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "www/server.js",
   "scripts": {
-    "start": "node .",
+    "start": "node www/server.js",
     "tsc": "tsc",
-    "dev": "ts-node-dev --respawn --transpileOnly ./src/server.ts",
+    "dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "tsc && node ./www/server.js",
     "clean": "rm -rf www/ || true",
     "build": "npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
@@ -29,7 +29,7 @@
     "pg": "^7.9.0",
     "reflect-metadata": "^0.1.13",
     "sequelize": "^6.5.0",
-    "sequelize-typescript": "^0.6.9"
+    "sequelize-typescript": "^2.1.6"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.26",
