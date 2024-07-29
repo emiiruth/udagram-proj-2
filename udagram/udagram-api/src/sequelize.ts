@@ -2,10 +2,10 @@ import { Sequelize } from "sequelize-typescript";
 import { config } from "./config/config";
 
 export const sequelize = new Sequelize({
-  username: config.username,
-  password: config.password,
-  database: config.database,
-  host: config.host,
+  username: "postgres",
+  password: "udagramdb",
+  database: "postgres",
+  host: "udagram-database.cr6ew6yq46zn.us-east-1.rds.amazonaws.com",
 
   dialect: "postgres",
   storage: ":memory:",
