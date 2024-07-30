@@ -48,4 +48,8 @@
     "ts-node-dev": "^1.0.0-pre.32",
     "typescript": "^4.2.3"
   }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> origin/master

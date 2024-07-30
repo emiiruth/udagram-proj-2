@@ -10,7 +10,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "install-fix": "npm install --legacy-peer-deps"
+    "install-fix": "npm install --legacy-peer-deps",
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -59,3 +60,4 @@
   },
   "description": "An Ionic project"
 }
+
