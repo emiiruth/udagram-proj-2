@@ -1,5 +1,5 @@
-import AWS = require("aws-sdk");
-import { config } from "./config/config";
+import AWS from "aws-sdk";
+import { config } from "../config/config";
 
 // Configure AWS
 const credentials = new AWS.Credentials({
