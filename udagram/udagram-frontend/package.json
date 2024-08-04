@@ -10,6 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "deploy": "eb deploy",
     "install-fix": "npm install --legacy-peer-deps"
   },
   "private": true,
