@@ -1,6 +1,5 @@
 import AWS = require("aws-sdk");
 import { config } from "./config/config";
-require('dotenv').config();
 
 // Configure AWS
 const credentials = new AWS.Credentials({
@@ -34,8 +33,6 @@ export function getPutSignedUrl(key: string): string {
     Key: key,
     Expires: signedUrlExpireSeconds,
   });
-
-  
 }
 
 
