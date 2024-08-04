@@ -9,19 +9,24 @@ const router: Router = Router();
 
 export function requireAuth(req: Request, res: Response, next: NextFunction) {
   if (!req.headers || !req.headers.authorization) {
+    console.log('No authorization headers.');
     return res.status(401).send({message: 'No authorization headers.'});
   }
 
   const tokenBearer = req.headers.authorization.split(' ');
   if (tokenBearer.length != 2) {
+    console.log('Malformed token. Parts:', tokenBearer);
     return res.status(401).send({message: 'Malformed token.'});
   }
 
   const token = tokenBearer[1];
+  console.log('Token:', token);
   return jwt.verify(token, c.config.jwt.secret, (err, decoded) => {
     if (err) {
+      console.error('Token verification error:', err);
       return res.status(500).send({auth: false, message: 'Failed to authenticate.'});
     }
+    console.log('Token decoded:', decoded);
     return next();
   });
 }

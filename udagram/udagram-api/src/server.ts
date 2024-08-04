@@ -14,6 +14,7 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
   console.log('POSTGRES_USERNAME:', process.env.POSTGRES_USERNAME);
   console.log('POSTGRES_PASSWORD:', process.env.POSTGRES_PASSWORD);
   console.log('POSTGRES_DB:', process.env.POSTGRES_DB);
+  console.log('JWT_SECRET', process.env.JWT_SECRET)
   
   console.log("Starting database connection...");
 
@@ -32,10 +33,9 @@ import { V0_FEED_MODELS, V0_USER_MODELS } from "./controllers/v0/model.index";
 
   const app = express();
   const port = 8080;
-
-  app.use(bodyParser.json());
-
+  
   app.use(cors());
+  app.use(bodyParser.json());
   app.options('*', cors()) // enable pre-flight requests  
 
   app.use("/api/v0/", IndexRouter);
