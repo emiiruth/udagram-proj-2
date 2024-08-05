@@ -1,0 +1,7 @@
+Pipeline
+-Trigger: Pushing git commit to main triggers pipeline
+-Install: Installs dependencies using orbs (npm, aws cli, eb cli, etc)
+-Build: Runs build scripts for front end and backend to build apps
+-Deploy: Front end is deployed onto AWS S3 bucket (aws sync), backend is deployed onto eb (eb deploy)
+￼
+![Alt text](pipeline-diagram.png)
